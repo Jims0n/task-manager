@@ -97,12 +97,51 @@ task-manager/
 
 ## Setup Instructions
 
-### Prerequisites
+### Option 1: Docker (Recommended)
+
+The easiest way to run the project locally.
+
+**Prerequisites:**
+- Docker
+- Docker Compose
+
+**Steps:**
+
+1. Clone the repository and navigate to the project root:
+   ```bash
+   cd task-manager
+   ```
+
+2. Start all services:
+   ```bash
+   docker-compose up --build
+   ```
+
+3. Access the application:
+   - **Frontend**: http://localhost:3000
+   - **Backend API**: http://localhost:8000
+   - **API Docs**: http://localhost:8000/api/docs/
+
+4. To stop the services:
+   ```bash
+   docker-compose down
+   ```
+
+5. To stop and remove all data (including database):
+   ```bash
+   docker-compose down -v
+   ```
+
+---
+
+### Option 2: Manual Setup
+
+#### Prerequisites
 - Python 3.9+
 - Node.js 18+
 - PostgreSQL
 
-### Backend Setup
+#### Backend Setup
 
 1. Navigate to the backend directory:
    ```bash
@@ -153,7 +192,7 @@ task-manager/
 
 The backend will be available at `http://localhost:8000`
 
-### Frontend Setup
+#### Frontend Setup
 
 1. Navigate to the frontend directory:
    ```bash
